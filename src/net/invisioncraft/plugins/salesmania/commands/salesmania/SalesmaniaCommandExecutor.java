@@ -13,6 +13,7 @@ import org.bukkit.command.CommandSender;
 public class SalesmaniaCommandExecutor implements CommandExecutor {
     protected Salesmania plugin;
     protected Locale localeCommand;
+    LocaleCommand localeCommand = LocaleCommand.valueOf(args[1].toUpperCase());
 
     enum SalesmaniaCommand {
         LOCALE,

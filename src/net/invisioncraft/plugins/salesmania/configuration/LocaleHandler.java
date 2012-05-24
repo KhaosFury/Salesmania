@@ -21,6 +21,7 @@ public class LocaleHandler {
         localeMap = new HashMap<String, Locale>();
         localeMap.put(plugin.getSettings().getDefaultLocale(), new Locale(plugin, plugin.getSettings().getDefaultLocale()));
         config = new Configuration(plugin, "playerLocale.yml").getConfig();
+
     }
 
     public Locale getLocale(CommandSender sender) {
@@ -36,6 +37,10 @@ public class LocaleHandler {
         return true;
     }
         else return false;
+    }
+    enum LocaleCommand {
+        LIST,
+        SET
     }
 
     public Locale getDefaultLocale() {
